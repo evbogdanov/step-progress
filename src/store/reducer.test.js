@@ -6,31 +6,18 @@ describe('reducer', () => {
     expect(reducer(undefined, {})).toEqual({step: 0});
   });
 
-  it('should not update the state when the previous step is clicked ', () => {
-    expect(reducer(
-      {step: 1},
-      {type: actions.SET_NEXT_STEP, data: {stepClicked: 0}}
-    )).toEqual({step: 1});
-  });
-
-  it('should not update the state when the current step is clicked ', () => {
-    expect(reducer(
-      {step: 1},
-      {type: actions.SET_NEXT_STEP, data: {stepClicked: 1}}
-    )).toEqual({step: 1});
-  });
-
-  it('should update the state when the next step is clicked ', () => {
-    expect(reducer(
-      {step: 1},
-      {type: actions.SET_NEXT_STEP, data: {stepClicked: 2}}
-    )).toEqual({step: 2});
-  });
-
-  it('should not update the state when other step is clicked ', () => {
-    expect(reducer(
-      {step: 1},
-      {type: actions.SET_NEXT_STEP, data: {stepClicked: 3}}
-    )).toEqual({step: 1});
+  it('should update the state only when the next step is clicked', () => {
+    const steps = [
+      {stepBefore: 1, stepClicked: 0, stepAfter: 1},
+      {stepBefore: 1, stepClicked: 1, stepAfter: 1},
+      {stepBefore: 1, stepClicked: 2, stepAfter: 2},
+      {stepBefore: 1, stepClicked: 3, stepAfter: 1},
+    ];
+    for (const {stepBefore, stepClicked, stepAfter} of steps) {
+      expect(reducer(
+        {step: stepBefore},
+        {type: actions.SET_NEXT_STEP, data: {stepClicked}}
+      )).toEqual({step: stepAfter});
+    }
   });
 });
