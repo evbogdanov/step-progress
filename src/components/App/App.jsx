@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Progress from './Progress';
+import Progress from '../Progress/Progress';
 
 class App extends Component {
   render() {

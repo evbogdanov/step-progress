@@ -2,8 +2,8 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Progress } from './Progress';
-import ErrorMessage from './ErrorMessage';
-import Step from './Step';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import Step from '../Step/Step';
 
 configure({adapter: new Adapter()});
 

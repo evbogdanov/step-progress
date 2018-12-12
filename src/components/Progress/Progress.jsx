@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Progress.css';
-import Step from './Step';
-import ProgressBar from './ProgressBar';
-import ErrorMessage from './ErrorMessage';
-import * as actions from '../store/actions';
+import Step from '../Step/Step';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import * as actions from '../../store/actions';
 
 const MIN_STEPS = 2,
       MAX_STEPS = 5;
