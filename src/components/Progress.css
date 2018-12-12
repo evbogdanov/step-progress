@@ -1,0 +1,14 @@
+.Progress {
+  height: 80px;
+  position: relative;
+}
+
+.Progress__steps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

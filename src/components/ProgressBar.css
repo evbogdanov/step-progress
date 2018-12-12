@@ -1,0 +1,16 @@
+.ProgressBar {
+  height: 10px;
+  position: relative;
+  top: 55px;
+  background: lightgray;
+}
+
+.ProgressBar__active-bar {
+  height: 10px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: blue;
+  transition: width .25s ease-in;
+}
