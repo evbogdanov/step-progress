@@ -1,12 +1,9 @@
 .Progress {
   height: 80px;
-  position: relative;
 }
 
 .Progress__steps {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-top: -80px;
   height: 80px;
   width: 100%;
   display: flex;
