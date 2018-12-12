@@ -1,7 +1,5 @@
 # step-progress
 
-A step progress React component
-
 ![Step progress bar](./screen.png)
 
 ### An easy setup
