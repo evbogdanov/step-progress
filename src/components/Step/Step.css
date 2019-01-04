@@ -15,11 +15,10 @@
   padding: 0 5px;
   cursor: pointer;
   color: lightgray;
-  transition: color .5s ease-in;
+  transition: color 0.5s ease-in;
 }
 
 .Step_active .Step__text {
-  cursor: default;
   color: blue;
 }
 
@@ -33,11 +32,10 @@
   justify-content: center;
   cursor: pointer;
   background: lightgray;
-  transition: color .5s ease-in;
+  transition: color 0.5s ease-in;
 }
 
 .Step_active .Step__dot {
-  cursor: default;
   background: blue;
 }
 
