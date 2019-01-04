@@ -1,8 +1,15 @@
 import React from "react";
-import "./ErrorMessage.css";
+import styled from "styled-components";
+
+const Paragraph = styled.p`
+  background: pink;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+`;
 
 const ErrorMessage = props => {
-  return <p className="ErrorMessage">{props.children}</p>;
+  return <Paragraph>{props.children}</Paragraph>;
 };
 
 export default ErrorMessage;

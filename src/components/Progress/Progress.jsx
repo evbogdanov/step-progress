@@ -1,13 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./Progress.css";
 import Step from "../Step/Step";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import * as actions from "../../store/actions";
+import styled from "styled-components";
 
 const MIN_STEPS = 2;
 const MAX_STEPS = 5;
+
+const StyledProgress = styled.div`
+  height: 80px;
+`;
+
+const StyledSteps = styled.div`
+  margin-top: -80px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
 
 export const Progress = props => {
   const len = props.steps.length;
@@ -32,10 +44,10 @@ export const Progress = props => {
   ));
 
   return (
-    <div className="Progress">
+    <StyledProgress>
       <ProgressBar step={props.step} totalSteps={len} />
-      <div className="Progress__steps">{steps}</div>
-    </div>
+      <StyledSteps>{steps}</StyledSteps>
+    </StyledProgress>
   );
 };
 
